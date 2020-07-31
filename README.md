@@ -39,3 +39,18 @@ Run the beow command to send the request with some pre-popuated values -
 ```
 python request.py
 ```
+
+### Heroku Deployment steps
+```
+pipenv shell
+pip install scikit-learn pandas numpy flask gunicorn
+pip freeze > requirements.txt
+git init
+git add .
+git commit -m 'initial commit'
+heroku login
+heroku create ml-linear-regression-flask
+git remote -v
+git push heroku master
+heroku open
+```
